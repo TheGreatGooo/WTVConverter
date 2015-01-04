@@ -352,6 +352,14 @@ namespace WTVConverter
             String autoStartupTmp=autostartupChk.Checked==true?"true":"false";
             data.Add("autoStartup", autoStartupTmp);
             saveStartupProperties(data);
+            if (autostartupChk.Checked)
+            {
+                timer1.Enabled = true;
+            }
+            else
+            {
+                timer1.Enabled = false;
+            }
         }
 
     }
